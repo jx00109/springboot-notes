@@ -82,4 +82,12 @@
     loginProcessingUrl():用于处理用户登录信息的Url(**不是页面**)  
     successForwardUrl():登录成功后跳转的url，需要再写controller进行捕获并返回页面，不然会404  
     
+4. @GeneratedValue中strategy参数的的一些区别    
+    strategy = GenerationType.IDENTITY    
+    该策略下，主键的自增由mysql进行维护，**describe table_name**命令可以查看到主键有自增属性   
+    
+    strategy = GenerationType.AUTO    
+    该策略下，主键的自增由hibernate进行维护，**describe table_name**命令可以查看到主键无自增属性   
+    
+    
     
