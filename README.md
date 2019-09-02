@@ -138,5 +138,15 @@
     
 7. order by多列时，是按照关键字后的列名顺序进行依次进行排序的。   
 
-8. 
+8. 使用IDE连接MySQL数据库时，出现错误
+    ```text
+       MySQL版本：8.0.16
+       URL：jdbc:mysql://localhost:3306/febs
+       错误代码：08001
+    ```
+    报错原因：IDEA默认使用的高版本数据库链接驱动，需要在URL后加上参数  
+    ```text
+       URL：jdbc:mysql://localhost:3306/febs?serverTimezone=Hongkong&characterEncoding=utf-8
+    ```  
+9. 
     
